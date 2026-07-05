@@ -1146,16 +1146,31 @@ p {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr minmax(280px, 380px);
-    gap: var(--space-lg);
-    align-items: center;
+    grid-template-rows: auto auto;
+    column-gap: var(--space-lg);
+    row-gap: var(--space-md);
+    align-items: start;
 }
 
-.about-image {
-    order: 2;
-}
-
+/* Unwrap about-content so children participate in the outer grid */
 .about-content {
-    order: 1;
+    display: contents;
+}
+
+.about-header {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* Photo starts at row 2 — aligned with the text, not the heading */
+.about-image {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.about-text {
+    grid-column: 1;
+    grid-row: 2;
 }
 
 .about-photo {
@@ -1166,11 +1181,11 @@ p {
     display: block;
 }
 
-.about-content h2 {
+.about-header h2 {
     color: var(--color-text);
 }
 
-.about-content > p {
+.about-text p {
     font-size: 1rem;
     line-height: 1.85;
     color: var(--color-text-soft);
@@ -1451,25 +1466,49 @@ p {
     }
 
     .about-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-lg);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
     }
 
+    /* Unwrap on mobile too — expose children for flex ordering */
+    .about-content {
+        display: contents;
+    }
+
+    .about-header { order: 1; }
+    .about-image  { order: 2; }
+    .about-text   { order: 3; }
+
     .about-photo {
-        max-width: 400px;
-        margin: 0 auto;
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
     }
 }
 
 @media (max-width: 768px) {
-    .form-grid {
-        grid-template-columns: 1fr;
+
+    /* --- Container --- */
+    .container {
+        padding: 0 1.25rem;
     }
 
-    .booking-form {
-        padding: var(--space-md);
+    /* --- Odstavce do bloku --- */
+    p,
+    .massage-comparison-intro p,
+    .massage-comparison p,
+    .service-hesitation-text,
+    .about-content p,
+    .about-text p,
+    .why-me p,
+    .intro-text p {
+        text-align: justify;
+        hyphens: manual;
+        -webkit-hyphens: manual;
     }
 
+    /* --- Navigation --- */
     .nav-toggle {
         display: flex;
     }
@@ -1496,27 +1535,24 @@ p {
         font-size: 1.1rem;
     }
 
-    .intro-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-lg);
+    /* --- Hero — přibližně čtvercový formát --- */
+    .hero {
+        min-height: 100vw;
+        align-items: flex-start;
     }
 
-    .intro-visual {
-        padding-top: 0;
+    .hero-title {
+        font-size: 2.6rem;
     }
 
-    .service-details {
-        flex-direction: column;
+    .hero-content {
+        padding: 105px 1.25rem 2rem;
+        width: 100%;
     }
 
-    .about-values {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-inner {
-        flex-direction: column;
-        gap: var(--space-xs);
-        text-align: center;
+    .hero-desc {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
     }
 
     .hero-desc br {
@@ -1526,24 +1562,146 @@ p {
     .hero-title br {
         display: none;
     }
+
+    /* --- Intro --- */
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .intro-visual {
+        padding-top: 0;
+    }
+
+    /* --- Services --- */
+    .services-header {
+        padding: 1.5rem;
+    }
+
+    .service-tabs {
+        margin-top: var(--space-md);
+        margin-bottom: var(--space-md);
+    }
+
+    .service-tab {
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+
+    .service-tag-title {
+        font-size: 1.5rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .service-card-content {
+        padding: 1.5rem;
+    }
+
+    .service-card-side {
+        padding: 1.5rem;
+    }
+
+    /* Price row — stack */
+    .service-price {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+        margin-top: var(--space-lg);
+    }
+
+    /* "Pro koho" — stack */
+    .service-for-whom-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .service-for-whom {
+        margin-top: var(--space-lg);
+        padding-top: var(--space-lg);
+    }
+
+    /* Comparison row — stack */
+    .massage-comparison-row {
+        grid-template-columns: 1fr;
+    }
+
+    .massage-comparison {
+        margin-top: var(--space-lg);
+    }
+
+    .massage-comparison-item {
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    /* --- Hesitation grid — stack --- */
+    .service-hesitation-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+
+    .service-hesitation {
+        padding: 1.5rem;
+    }
+
+    .service-hesitation-left span,
+    .service-hesitation-right span {
+        font-size: 1.15rem;
+    }
+
+    /* --- Booking --- */
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-form {
+        padding: var(--space-md);
+    }
+
+    /* --- About --- */
+    .service-details {
+        flex-direction: column;
+    }
+
+    .about-values {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Footer --- */
+    .footer-inner {
+        flex-direction: column;
+        gap: var(--space-xs);
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
     :root {
-        --space-lg: 3rem;
-        --space-xl: 4rem;
-        --space-2xl: 5rem;
+        --space-lg: 2.5rem;
+        --space-xl: 3.5rem;
+        --space-2xl: 4.5rem;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
     }
 
     .service-card-content {
-        padding: var(--space-md);
+        padding: 1.25rem;
     }
 
     .service-card-side {
-        padding: var(--space-md);
+        padding: 1.25rem;
     }
 
     .service-quote blockquote {
         font-size: 1.25rem;
+    }
+
+    .services-header {
+        padding: 1.25rem;
+    }
+
+    .service-hesitation {
+        padding: 1.25rem;
     }
 }
