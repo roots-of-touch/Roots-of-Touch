@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="520" viewBox="0 0 420 520">
+  <g fill="#A4B494" fill-opacity="0.15" stroke="#A4B494" stroke-opacity="0.22" stroke-width="1">
+
+    <!-- Main stem -->
+    <path d="M210 520 C208 480 200 440 195 400 C190 360 188 320 185 280 C182 240 178 200 170 160" fill="none" stroke-width="1.5" stroke-opacity="0.2"/>
+
+    <!-- Branch left 1 -->
+    <path d="M195 400 C175 385 155 375 130 370" fill="none" stroke-opacity="0.2"/>
+    <!-- Leaf left 1 -->
+    <path d="M195 400 C175 375 148 365 128 368 C128 368 158 352 195 400Z"/>
+
+    <!-- Branch right 1 -->
+    <path d="M193 370 C215 352 235 345 262 342" fill="none" stroke-opacity="0.2"/>
+    <!-- Leaf right 1 -->
+    <path d="M193 370 C217 348 240 340 262 340 C262 340 232 328 193 370Z"/>
+
+    <!-- Branch left 2 -->
+    <path d="M190 330 C168 312 148 304 120 300" fill="none" stroke-opacity="0.2"/>
+    <!-- Leaf left 2 -->
+    <path d="M190 330 C165 308 142 300 118 298 C118 298 150 285 190 330Z"/>
+
+    <!-- Branch right 2 -->
+    <path d="M188 300 C212 280 235 272 265 270" fill="none" stroke-opacity="0.2"/>
+    <!-- Leaf right 2 -->
+    <path d="M188 300 C214 278 238 270 266 268 C266 268 234 256 188 300Z"/>
+
+    <!-- Branch left 3 -->
+    <path d="M186 260 C162 240 140 232 112 228" fill="none" stroke-opacity="0.2"/>
+    <!-- Leaf left 3 -->
+    <path d="M186 260 C160 236 136 228 110 226 C110 226 142 212 186 260Z"/>
+
+    <!-- Branch right 3 -->
+    <path d="M184 230 C208 210 230 202 260 200" fill="none" stroke-opacity="0.2"/>
+    <!-- Leaf right 3 -->
+    <path d="M184 230 C210 208 233 200 261 198 C261 198 228 186 184 230Z"/>
+
+    <!-- Branch left 4 small -->
+    <path d="M182 195 C162 178 144 172 120 170" fill="none" stroke-opacity="0.18"/>
+    <!-- Leaf left 4 -->
+    <path d="M182 195 C159 174 140 168 118 166 C118 166 148 154 182 195Z"/>
+
+    <!-- Branch right 4 small -->
+    <path d="M180 168 C200 150 220 144 244 142" fill="none" stroke-opacity="0.18"/>
+    <!-- Leaf right 4 -->
+    <path d="M180 168 C202 148 222 142 245 140 C245 140 215 128 180 168Z"/>
+
+    <!-- Top small bud -->
+    <path d="M170 160 C168 140 164 128 160 118 C165 126 168 138 170 160Z"/>
+    <path d="M170 160 C172 140 176 128 180 118 C175 126 172 138 170 160Z"/>
+
+  </g>
+</svg>
