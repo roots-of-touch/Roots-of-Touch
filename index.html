@@ -11,6 +11,25 @@
 </head>
 <body>
 
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <filter id="sage-colorize" color-interpolation-filters="sRGB">
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="0.357" intercept="0.643"/>
+        <feFuncG type="linear" slope="0.294" intercept="0.706"/>
+        <feFuncB type="linear" slope="0.420" intercept="0.580"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="forest-colorize" color-interpolation-filters="sRGB">
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="0.647" intercept="0.353"/>
+        <feFuncG type="linear" slope="0.541" intercept="0.459"/>
+        <feFuncB type="linear" slope="0.718" intercept="0.282"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
+
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="nav-inner">
@@ -24,6 +43,7 @@
                 <li><a href="#uvod" class="nav-link active">Úvod</a></li>
                 <li><a href="#sluzby" class="nav-link">Služby</a></li>
                 <li><a href="#o-mne" class="nav-link">O mně</a></li>
+                <li><a href="#rezervace" class="nav-link">Rezervace</a></li>
             </ul>
         </div>
     </nav>
@@ -47,57 +67,29 @@
         </div>
     </section>
 
-    <!-- Intro section -->
-    <section class="intro">
-        <div class="container">
-            <div class="intro-grid">
-                <div class="intro-text">
-                    <span class="section-label">Filosofie</span>
-                    <h3>PROŽÍVÁNÍ SEXUALITY<br>SAHÁ DALEKO ZA HRANICE<br>POUZE FYZICKÉHO USPOKOJENÍ</h3>
-                    <p>Věřím, že&nbsp;naše tělo mnohdy uchovává příběhy, které naše mysl dávno zapomněla a&nbsp;mohou nám bránit v&nbsp;plném prožívání naší sexuality a&nbsp;otevřít se&nbsp;intimitě. Skrze somatickou práci s&nbsp;tělem otevíráme prostor pro&nbsp;uvolnění. Ve&nbsp;své práci propojuji současné poznatky o&nbsp;regulaci nervového systému spolu s&nbsp;jemnou energetickou prací, která vychází z&nbsp;východní filosofie. A&nbsp;proto slovo celostní neodkazuje pouze na&nbsp;to fyzické tělo, ale&nbsp;na&nbsp;vnímání člověka jako celku.</p>
-                    
-                </div>
-                <div class="intro-visual">
-                    <div class="intro-card">
-                        <div class="intro-card-icon">
-                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
-                                <path d="M24 12C24 12 16 18 16 24C16 30 24 36 24 36C24 36 32 30 32 24C32 18 24 12 24 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <line x1="24" y1="12" x2="24" y2="36" stroke="currentColor" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <h3>Bezpečí & Důvěra</h3>
-                        <p>Vše probíhá ve&nbsp;tvém tempu, s&nbsp;respektem k&nbsp;tvým hranicím a&nbsp;potřebám.</p>
-                    </div>
-                    <div class="intro-card">
-                        <div class="intro-card-icon">
-                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 24C8 24 14 12 24 12C34 12 40 24 40 24C40 24 34 36 24 36C14 36 8 24 8 24Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="1.5"/>
-                                <circle cx="24" cy="24" r="2" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <h3>Přítomnost</h3>
-                        <p>Moje plná přítomnost a&nbsp;pozornost věnovaná jenom tobě a&nbsp;každému okamžiku našeho setkání.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Služby -->
     <section class="services" id="sluzby">
         <div class="container">
             <div class="services-header">
                 <div class="services-header-text">
                     <span class="section-label">Služby</span>
-                    <h2>BACK TO THE ROOTS</h2>
-                    <p class="services-subtitle">Individuální session zaměřená na&nbsp;somatickou práci s&nbsp;tělem.</p>
-                    <p class="services-subtitle services-subtitle-sub">Pojď ožívit své tělo skrze dech, sebeprojev a&nbsp;vědomý dotyk.</p>
+                    <h2>BACK TO THE ROOTS SESSION</h2>
+                    <p class="services-subtitle">Individuální session zaměřená na&nbsp;somatickou práci s&nbsp;tělem skrze celostní smyslnou masáž.</p>
+                    <p class="services-subtitle services-subtitle-sub">Pojď oživit své tělo skrze dech, sebeprojev a&nbsp;vědomý dotek.</p>
                 </div>
                     <div class="service-tabs">
-                        <button class="service-tab" data-tab="zeny">Pro ženy</button>
-                        <button class="service-tab active" data-tab="muzi">Pro muže</button>
+                        <button class="service-tab" data-tab="zeny">
+                            <span class="tab-icon-wrap">
+                                <img src="images/icon-wave.png" alt="" class="tab-icon">
+                            </span>
+                            <span>Pro ženy</span>
+                        </button>
+                        <button class="service-tab active" data-tab="muzi">
+                            <span class="tab-icon-wrap">
+                                <img src="images/icon-flame.png" alt="" class="tab-icon">
+                            </span>
+                            <span>Pro muže</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -121,18 +113,18 @@
                                 <div class="service-step">
                                     <span class="step-number">02</span>
                                     <div>
-                                        <strong>Embodiment</strong>
-                                        <p>V mém podání a&nbsp;kontextu masáže je&nbsp;to krátká technika (cca 15–20&nbsp;minut) během které se&nbsp;pomocí intuitivního pohybu a&nbsp;dechu naladíš na&nbsp;své tělo. Vytvoříme prostor pro&nbsp;uvolnění a&nbsp;nakonec tě čeká krátká meditace na&nbsp;zavnímání svého lůna.</p>
+                                        <strong>Embodiment <span class="step-subtitle">(15–20&nbsp;minut)</span></strong>
+                                        <p>V mém podání a&nbsp;kontextu masáže je&nbsp;to krátká technika během které se&nbsp;pomocí intuitivního pohybu a&nbsp;dechu naladíš na&nbsp;své tělo. Vytvoříme prostor pro&nbsp;uvolnění a&nbsp;nakonec tě čeká krátká meditace na&nbsp;zavnímání svého lůna.</p>
                                     </div>
                                 </div>
                                 <div class="service-step">
                                     <span class="step-number">03</span>
                                     <div>
-                                        <strong>Masáž</strong>
+                                        <strong>Masáž <span class="step-subtitle">(90&nbsp;minut)</span></strong>
                                         <ul class="service-phase-list">
-                                            <li>Omývání horkými žínkami</li>
-                                            <li>Probouzení citlivosti těla hebkými předměty</li>
-                                            <li>Olejová masáž s&nbsp;různými druhy doteků podle toho, co&nbsp;si&nbsp;tvé tělo žádá<br><span class="service-phase-note">(masáž není ukončena intimní masáží)</span></li>
+                                            <li>Uzemnění a&nbsp;probouzení energie v&nbsp;těle</li>
+                                            <li>Hlazení hebkými předměty</li>
+                                            <li>Olejová masáž s&nbsp;různými druhy doteků podle toho, co&nbsp;si&nbsp;tvé tělo žádá<br><span class="service-phase-note">(masáž není ukončena intimní masáží a&nbsp;intimních partií se&nbsp;nedotýkám v&nbsp;žádné části masáže)</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -143,7 +135,7 @@
                                     <span class="service-price-amount">cca 2,5&nbsp;hodiny</span>
                                 </div>
                                 <div class="service-price-col">
-                                    <span class="service-price-label">Cena (90&nbsp;min. masáž)</span>
+                                    <span class="service-price-label">Cena</span>
                                     <span class="service-price-amount">2 890&nbsp;Kč</span>
                                 </div>
                             </div>
@@ -175,6 +167,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="service-card-photo-mobile" aria-hidden="true">
+                    <img src="images/women-bg.jpg" alt="" class="service-card-photo-img">
+                </div>
             </div>
 
             <!-- Pro muže -->
@@ -196,18 +191,18 @@
                                 <div class="service-step">
                                     <span class="step-number">02</span>
                                     <div>
-                                        <strong>Úvodní rituál</strong>
+                                        <strong>Úvodní rituál <span class="step-subtitle">(15–20&nbsp;minut)</span></strong>
                                         <p>Rituál, během kterého uvolňuji nejen tělo, ale&nbsp;i&nbsp;duši. Skrze nejrůznější doteky, gesta a&nbsp;imaginaci vyjadřuji muži hluboký respekt a&nbsp;úctu. Jedná se&nbsp;o&nbsp;velmi něžný a&nbsp;pomalý dotyk na&nbsp;všech částech těla, skrze který se&nbsp;postupně přesuneme do&nbsp;samotné masáže.</p>
                                     </div>
                                 </div>
                                 <div class="service-step">
                                     <span class="step-number">03</span>
                                     <div>
-                                        <strong>Masáž</strong>
+                                        <strong>Masáž <span class="step-subtitle">(90&nbsp;minut)</span></strong>
                                         <ul class="service-phase-list">
-                                            <li>Omývání horkými žínkami</li>
-                                            <li>Probouzení citlivosti těla hebkými předměty</li>
-                                            <li>Olejová masáž s&nbsp;různými druhy doteků podle toho, co&nbsp;si&nbsp;tvé tělo žádá<br><span class="service-phase-note">(masáž není ukončena intimní masáží)</span></li>
+                                            <li>Uzemnění a&nbsp;probouzení energie v&nbsp;těle</li>
+                                            <li>Hlazení hebkými předměty</li>
+                                            <li>Olejová masáž s&nbsp;různými druhy doteků podle toho, co&nbsp;si&nbsp;tvé tělo žádá<br><span class="service-phase-note">(masáž není ukončena intimní masáží, ale neznamená to, že&nbsp;se&nbsp;intimních partií nedotýkám vůbec)</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -218,8 +213,8 @@
                                     <span class="service-price-amount">cca 2,5&nbsp;hodiny</span>
                                 </div>
                                 <div class="service-price-col">
-                                    <span class="service-price-label">Cena (90&nbsp;min. masáž)</span>
-                                    <span class="service-price-amount">2 890&nbsp;Kč</span>
+                                    <span class="service-price-label">Cena</span>
+                                    <span class="service-price-amount">3 490&nbsp;Kč</span>
                                 </div>
                             </div>
                         </div>
@@ -252,18 +247,136 @@
                         </div>
                     </div>
                 </div>
+                <div class="service-card-photo-mobile" aria-hidden="true">
+                    <img src="images/men-bg.jpg" alt="" class="service-card-photo-img">
+                </div>
+            </div>
+            <a href="#rezervace" class="service-rezervace-banner">Rezervuj si svůj termín →</a>
+        </div>
+    </section>
+
+    <!-- Recenze -->
+    <section class="reviews-section">
+        <div class="container">
+            <h3 class="massage-comparison-title">Co ti masáž u&nbsp;mě přinese?</h3>
+            <p class="reviews-intro-text">Upřímně — je&nbsp;to naprosto individuální, a&nbsp;proto ti tu&nbsp;nebudu zaručovat, jak se&nbsp;po masáži budeš cítit. Ale&nbsp;tady je&nbsp;pár recenzí od&nbsp;lidí, kteří u&nbsp;mě na&nbsp;masáži byli.</p>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p>Když Kája sdílela možnost dojet za&nbsp;ní na&nbsp;masáž, nevěděla jsem do&nbsp;čeho jdu, ale&nbsp;impuls mi&nbsp;řekl jdi do&nbsp;toho, a&nbsp;tak jsem šla. Teda jela jsem přes 4 hodiny do&nbsp;Prahy, ale&nbsp;nelituji. Chtěla jsem se&nbsp;uvolnit více do&nbsp;ženskosti, do&nbsp;prožívání a&nbsp;hlavně do&nbsp;přijímání pozornosti a&nbsp;péče, protože s&nbsp;tím mám problém, hodně dávám a&nbsp;málo přijímám. Kájina přítomnost je&nbsp;velmi příjemná, můžete se&nbsp;uvolnit do&nbsp;projevu, na&nbsp;který při&nbsp;„klasické masáži" úplně není prostor — jako třeba hluboký dech, smích, pláč, takové to&nbsp;příjemné „vrnění" a&nbsp;nemusíte se&nbsp;stydět, že si&nbsp;o&nbsp;vás něco pomyslí divného.</p>
+                    <p>Před samotnou masáží jsme si&nbsp;popovídaly, řekla mi&nbsp;jak bude probíhat a&nbsp;co zhruba čekat. Řekla skvělou věc — když bude cokoliv moc nebo málo, řekni hned, nečekej na&nbsp;nic — což mé&nbsp;úzkostné já uklidnilo a&nbsp;otevřelo mu&nbsp;možnost se&nbsp;ozvat bez&nbsp;výčitky.</p>
+                    <p>Takže Káji, děkuji za&nbsp;to, že jsem se&nbsp;mohla uvolnit, přijmout tvoji péči a&nbsp;dostat se&nbsp;zase blíž ke&nbsp;svému středu. Pod&nbsp;tvýma rukama roztály vrstvy, které mi&nbsp;bránily být sama sebou.</p>
+                    <span class="review-author">— Eva</span>
+                </div>
+                <div class="review-card">
+                    <p>U&nbsp;Káji jsem byla na&nbsp;masáži podobného typu poprvé a&nbsp;nevěděla jsem, co&nbsp;od&nbsp;toho čekat. Když jsem ke&nbsp;Káje přišla, udělala mi&nbsp;čaj a&nbsp;povídaly jsme si&nbsp;o&nbsp;tom, jak bude masáž vypadat, co&nbsp;všechno obnáší a&nbsp;jaké jsou naše hranice. Začala jsem se&nbsp;těšit na&nbsp;to, co&nbsp;mě čeká. Pak jsme tancovaly, meditovaly a&nbsp;nakonec jsem se&nbsp;mohla uvolnit při&nbsp;laskavé a&nbsp;smyslné masáži. Přestala jsem vnímat čas i&nbsp;prostor a&nbsp;jenom jsem se&nbsp;vžila do&nbsp;doteku a&nbsp;svých emocí. Kája má dar vytvořit příjemnou atmosféru a&nbsp;dotekem v&nbsp;těle probudit nejrůznější emoce. Chtěla jsem, aby taková pečující masáž neskončila a&nbsp;po ní mi&nbsp;chvilku trvalo vrátit se&nbsp;zase do&nbsp;reality. Tenhle opravdu celostní prožitek bych přála každému, kdo má problém udělat si&nbsp;čas na&nbsp;odpočinek a&nbsp;péči sám o&nbsp;sebe.</p>
+                    <span class="review-author">— Amanda</span>
+                </div>
+                <div class="review-card">
+                    <p>Tuto recenzi píšu jako člověk, který byl na&nbsp;masáži asi dvakrát v&nbsp;životě. Bral jsem to&nbsp;jako relax těla a&nbsp;svalů a&nbsp;nikdy jsem v&nbsp;tom nehledal nic víc. O&nbsp;to víc mě překvapila Kája a&nbsp;její masáž, která je&nbsp;ve&nbsp;dvou slovech „neverbální terapií", kdy tělo je&nbsp;spíš na&nbsp;druhém místě a&nbsp;všechna ta&nbsp;kouzla se&nbsp;dějí v&nbsp;hlavě. Opravdu bych v&nbsp;životě nečekal, že se&nbsp;dá z&nbsp;jakékoliv masáže odejít s&nbsp;pocitem, jak kdyby člověk odcházel z&nbsp;terapie, kde ze&nbsp;sebe dostal úplně všechno. Kája je&nbsp;neuvěřitelně empatická a&nbsp;celým „procesem" člověka provede jak po&nbsp;krásné lesní cestě. Myslím si, že každý by&nbsp;si&nbsp;měl takovou masáž vyzkoušet, aby zjistil, že to&nbsp;opravdu není jen o&nbsp;uvolnění těla a&nbsp;svalů, ale&nbsp;především toho, co&nbsp;si&nbsp;neseme v&nbsp;hlavě.</p>
+                    <span class="review-author">— Honza</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O mně -->
+    <section class="about" id="o-mne">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/about.jpg" alt="Karolína" class="about-photo">
+                    <div class="about-certs">
+                        <div class="about-cert-item">
+                            <img src="images/cert-core-touch-new.jpg" alt="Certifikát Core Touch">
+                        </div>
+                        <div class="about-cert-item">
+                            <img src="images/cert-osvedceni.jpg" alt="Osvědčení o profesní kvalifikaci">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="about-header">
+                        <span class="section-label">O mně</span>
+                        <h2>AHOJ, JÁ JSEM KAROLÍNA</h2>
+                    </div>
+                    <div class="about-text">
+                        <p class="about-lead">Téma vztahů a&nbsp;sexuality pro&nbsp;mě bylo velkým a&nbsp;bolavým tématem. Vždycky jsem byla hodně vnímavá a&nbsp;citlivá vůči svému okolí, až jsem se&nbsp;během dětství a&nbsp;dospívání vytvořila takové brnění, abych tak intenzivně neprožívala to, co&nbsp;mě bolelo. Ale společně s&nbsp;tím jsem potlačila téměř veškeré své prožívání. Moc jsem toho necítila fyzicky ani psychicky. A&nbsp;přesto mě lidská sexualita a&nbsp;vztahy extrémně fascinovaly.</p>
+                        <p>Zároveň jsem cítila, že&nbsp;tu přece musí být „něco víc". Neustále jsem s&nbsp;údivem pozorovala, jak prožívají partnerské vztahy a&nbsp;intimitu lidi z&nbsp;mého okolí. A&nbsp;vždycky jsem skončila u&nbsp;toho, že&nbsp;to není nic, po&nbsp;čem bych toužila. A&nbsp;začala jsem to&nbsp;„něco víc" hledat. V&nbsp;knížkách, videích, workshopech, kurzech. Někdy kolem sedmnácti let jsem se&nbsp;poprvé setkala s&nbsp;pojmy jako tantra, vědomé milování nebo napojování se&nbsp;na&nbsp;svou ženskou energii. Ale několik let to&nbsp;všechno byla jen teorie, kterou jsem měla plnou hlavu, ale&nbsp;nevěděla, jak to&nbsp;žít.</p>
+                        <p>Dotek byl pro&nbsp;mě vždy zvláštní kapitolou. V&nbsp;dětství si&nbsp;nepamatuju moc fyzického kontaktu ani láskyplných objetí s&nbsp;rodiči. Na&nbsp;druhou stranu byly v&nbsp;dětství moje intimní hranice výrazně překročeny způsobem, který by&nbsp;se&nbsp;rozhodně neměl dít. Možná proto jsem nevěděla, jak dotek dávat ani jak ho přijímat, a&nbsp;stal se&nbsp;pro&nbsp;mě něčím výjimečným (ani ne&nbsp;tak v&nbsp;tom negativním slova smyslu, že&nbsp;si&nbsp;ho musím zasloužit). Spíš jsem si&nbsp;do&nbsp;určité doby hodně vybírala, komu chci svůj dotyk dát a&nbsp;od&nbsp;koho ho budu přijímat. Bylo to&nbsp;pro&nbsp;mě opravdu hodně zranitelné. Zpětně vím, že&nbsp;jsem se&nbsp;lidí vždy dotýkala celým svým srdcem, jen jsem to&nbsp;dělala nevědomě. Několikrát jsem slyšela, že&nbsp;je můj dotyk jiný než dotyk ostatních lidí a&nbsp;až po&nbsp;letech jsem se&nbsp;dozvěděla, že&nbsp;existuje něco jako vědomý dotek. Já jiný dávat neuměla. A&nbsp;když jsem cítila, že&nbsp;nedokážu dát takový druh doteku — celý, přítomný, srdcem, tak jsem ho nedávala vůbec. Nechtěla jsem nepřítomně sahat na&nbsp;druhé tělo i&nbsp;duši.</p>
+                        <p>Skrze situace, které jsem si&nbsp;prožila, jsem nejdřív dlouho nebyla schopná intimní dotek přijímat. Pak se&nbsp;stal přesný opak — zoufale jsem ho hledala v&nbsp;jakékoliv možné podobě a&nbsp;považovala to&nbsp;za volnost a&nbsp;nějakou sexuální liberálnost. Cítila jsem se&nbsp;úplně vyhladovělá po&nbsp;dotyku a&nbsp;fyzické blízkosti.</p>
+                        <p>A&nbsp;až po&nbsp;těchto všemožných zkušenostech a&nbsp;objevování jsem začala opravdu ŽÍT to, co&nbsp;žiju dnes.</p>
+                        <p>Postupem času jsem zjistila, že&nbsp;k&nbsp;tantře jsem měla blízko dávno předtím, než jsem věděla, co&nbsp;tantra je. Vždycky jsem věřila v&nbsp;„něco". Pak jsem začala říkat, že&nbsp;věřím ve&nbsp;vesmír, ale&nbsp;nikdy jsem to&nbsp;nenazývala Bůh. A&nbsp;vlastně je&nbsp;asi jedno, jestli tomu říkám Bůh nebo vesmír — jde o&nbsp;to, že&nbsp;věřím v&nbsp;něco, co&nbsp;nás přesahuje. A&nbsp;zároveň jsem to&nbsp;celé i&nbsp;já. A&nbsp;právě v&nbsp;tomhle, ale&nbsp;spoustě dalších věcí mi tantra pomohla pochopit a&nbsp;dala mi jazyk pro&nbsp;něco, co&nbsp;jsem cítila, ale&nbsp;neuměla to&nbsp;pojmenovat. Přestala jsem mít pocit, že&nbsp;žiju ve&nbsp;svém vlastním vesmíru úplně sama.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro section -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <span class="section-label">Filosofie</span>
+                    <h3>PROŽÍVÁNÍ SEXUALITY<br>SAHÁ DALEKO ZA HRANICE<br>FYZICKÉHO USPOKOJENÍ</h3>
+                    <p>Věřím, že&nbsp;naše tělo mnohdy uchovává příběhy, které naše mysl dávno zapomněla a&nbsp;mohou nám bránit v&nbsp;plném prožívání naší sexuality a&nbsp;otevřít se&nbsp;intimitě. Skrze dotyk a&nbsp;somatickou práci s&nbsp;tělem otevíráme prostor pro&nbsp;uvolnění a&nbsp;plný prožitek ve&nbsp;tvém těle. Propojuji práci s&nbsp;fyzickým tělem společně s&nbsp;jemnou energetickou prací, která vychází z&nbsp;východní filosofie. A&nbsp;proto slovo celostní neodkazuje pouze na&nbsp;fyzické tělo, ale&nbsp;na&nbsp;vnímání člověka jako celku.</p>
+                    
+                </div>
+                <div class="intro-visual">
+                    <div class="intro-card">
+                        <div class="intro-card-icon">
+                            <img src="images/logo-symbol-transparent.png" alt="" class="logo-symbol">
+                        </div>
+                        <h3>Bezpečí & Důvěra</h3>
+                        <p>Prostor, kde jsi přijímán/a ve&nbsp;své plné autenticitě.</p>
+                        <p>Prostor, kde můžeš odložit všechny masky.</p>
+                        <p>Prostor, kde tě nikdo nehodnotí.</p>
+                    </div>
+                    <div class="intro-card">
+                        <div class="intro-card-icon">
+                            <img src="images/logo-symbol-transparent.png" alt="" class="logo-symbol">
+                        </div>
+                        <h3>Vědomý dotek</h3>
+                        <p>V&nbsp;tantře jsou ruce považovány za&nbsp;prodloužení srdce a&nbsp;z&nbsp;něj taky tento láskyplný druh doteku vychází&nbsp;— a&nbsp;proto umožňuje dotknout se&nbsp;i&nbsp;toho tvého.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Co tě čeká -->
+    <!-- Celostní smyslná masáž -->
+    <section class="celostni-section">
+        <div class="container">
+            <h3 class="celostni-heading">Celostní smyslná masáž v&nbsp;mém podání</h3>
+            <div class="celostni-text">
+                <p>Vycházím z&nbsp;principu moderní neo tantry a&nbsp;certifikované metody Core Touch. Výše ses dozvěděl/a, jak sezení přibližně probíhá, ale&nbsp;ráda bych zmínila pár základních rozdílů mezi klasickou sportovní, tantrickou a&nbsp;mojí masáží.</p>
+                <p>Součástí této masáže je&nbsp;často práce s&nbsp;tělem v&nbsp;jeho přirozenosti, tedy bez&nbsp;oblečení. Postupná nahota v&nbsp;průběhu masáže u&nbsp;obou stran umožňuje hlubší uvolnění a&nbsp;důvěru — zkrátka otvírá prostor pro&nbsp;to, být takový jací opravdu jsme a&nbsp;jak nás příroda stvořila. Zároveň to ale&nbsp;není povinnost, vždy respektuji tvé hranice, komfort a&nbsp;pocit bezpečí... to je&nbsp;na&nbsp;prvním místě.</p>
+                <p>Vedu tě do&nbsp;aktivního přijímání, kdy je&nbsp;vítaný jakýkoli somatický projev — od&nbsp;hlubokého dechu po pláč, smích nebo křik.</p>
+                <p>Celostní smyslná masáž může být velice podobná tantrické masáži, kterou možná znáš, ale&nbsp;součástí této masáže není masáž intimních partií. Rozhodla jsem se&nbsp;tuto část vynechat, protože chci, aby sezení se&nbsp;mnou bylo bez&nbsp;očekávání nějakého pomyslného finále nebo konce.</p>
+                <p>Mým cílem je&nbsp;zprostředkovat zážitek, který dokáže probudit citlivost v&nbsp;každé části tvého těla. Je&nbsp;to moment, kdy si&nbsp;můžeš dovolit cítit živost a&nbsp;radost skrze dotyk a&nbsp;vědomou pozornost zaměřenou pouze na&nbsp;sebe a&nbsp;to, co&nbsp;právě ve&nbsp;svém těle cítíš.</p>
+            </div>
+            <div class="massage-comparison">
+                <h4 class="massage-comparison-heading">Proč se&nbsp;nejedná o&nbsp;klasickou sportovní ani&nbsp;tantrickou masáž, jak ji známe</h4>
+                <div class="massage-comparison-row">
+                    <div class="massage-comparison-item">
+                        <p>Sportovní masáž asi všichni známe a&nbsp;většina ji někdy zažila. Standardně ulevuje od&nbsp;fyzické bolesti a&nbsp;slouží k&nbsp;uvolnění svalů. Soustředí se&nbsp;primárně na&nbsp;to fyzické tělo, i&nbsp;když celý tenhle proces může být velice relaxační a&nbsp;uklidňující.</p>
+                    </div>
+                    <div class="massage-comparison-item">
+                        <p>Tantra je&nbsp;duchovní filozofie, která se&nbsp;zabývá mnohem širším spektrem než&nbsp;jsou masáže — například prací s&nbsp;mantrami, jógou, rituály, meditací. Práce se&nbsp;sexualitou v&nbsp;této formě je&nbsp;pouze jedna určitá část, kterou jsme si&nbsp;tady na&nbsp;západě převzali. Název tantra masáže se&nbsp;u&nbsp;nás používá jako obecně známý termín pro&nbsp;tento druh masáže a&nbsp;práce s&nbsp;energií, ale&nbsp;jedná se&nbsp;spíše o&nbsp;modernější neo tantru. Proto se&nbsp;nepovažuji úplně za&nbsp;tantrickou masérku, protože na&nbsp;tantru pohlížím z&nbsp;mnohem širší perspektivy než&nbsp;jsou masáže. Součástí tantra masáží jsou často intimní masáže (yoni, lingam nebo anální masáže), které jsem se&nbsp;rozhodla nezařazovat do&nbsp;mých sessions. Bohužel se&nbsp;pojem tantra masáže začal používat i&nbsp;v&nbsp;kontextu erotických a&nbsp;sexuálních masáží... Při&nbsp;správném provedení se&nbsp;hodně ve&nbsp;zkratce jedná o&nbsp;masáž zaměřenou na&nbsp;probuzení sexuální energie (naší životní energie) a&nbsp;jejího vědomého prožívání, práci s&nbsp;dechem, vědomým dotykem a&nbsp;plnou přítomností.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="expectations">
         <div class="container">
             <div class="expectations-grid">
                 <div class="expectations-col">
                     <h3>Na co&nbsp;se&nbsp;můžeš těšit</h3>
                     <ul class="expectations-list expectations-yes">
-                        <li>Jedinečnou flow každé masáže a&nbsp;individuální citlivý přístup</li>
+                        <li>Autorskou masáž, která není kopií žádného kurzu a&nbsp;přináší jedinečný a&nbsp;individuální zážitek</li>
                         <li>Respekt k&nbsp;tvým hranicím a&nbsp;potřebám</li>
                         <li>Doteky, jejichž smyslem je&nbsp;probudit citlivost, vnímavost a&nbsp;potěšení v&nbsp;každé části těla — možná i&nbsp;tam, kde jsi je&nbsp;nikdy nehledal/a</li>
                         <li>Podporující prostor pro&nbsp;sebevyjádření a&nbsp;somatické projevy</li>
@@ -282,57 +395,6 @@
         </div>
     </section>
 
-    <!-- Proč zvolit moje služby -->
-    <section class="why-me" id="proc-ja">
-        <div class="container">
-            <span class="section-label">Proč já</span>
-            <h2>PROČ ZVOLIT MOJE SLUŽBY</h2>
-            <p>Nejsem žena, která by byla ztracená v&nbsp;tom, co&nbsp;chce dělat, a&nbsp;řekla bych si: zajedu na&nbsp;jeden kurz a&nbsp;uvidím... Téma vztahů a&nbsp;sexuality pro&nbsp;mě bylo od&nbsp;relativně nízkého věku velkým a&nbsp;bolavým tématem, na&nbsp;které jsem ale&nbsp;pohlížela z&nbsp;dost jiné perspektivy než&nbsp;většina lidí kolem mě. Chtěla jsem zkoumat podstatu, rozmanitost a&nbsp;hloubku, do&nbsp;které nás může sex dostat. Nejen skrze kurzy, knihy a&nbsp;přednášky, ale&nbsp;i&nbsp;vlastní zkušenosti a&nbsp;prožitek. Proto k&nbsp;této práci přistupuji nejen s&nbsp;hlubokým respektem, ale&nbsp;i&nbsp;hlubokými osobními prožitky, které se&nbsp;člověk nenaučí na&nbsp;žádném kurzu. Zjistila jsem, jak křehká a&nbsp;zranitelná je&nbsp;naše sexualita a&nbsp;vše s&nbsp;ní spojené, ale&nbsp;už vím i&nbsp;jak bohatá, šťavnatá a&nbsp;nekonečná dokáže být i&nbsp;přes všechny ty bolavé situace z&nbsp;minulosti.</p>
-
-            <div class="massage-comparison">
-                <h3 class="massage-comparison-title">Celostní smyslná masáž v&nbsp;mém podání</h3>
-                <div class="massage-comparison-intro">
-                    <p>Vycházím z&nbsp;principu moderní neo tantry a&nbsp;certifikované metody Core Touch. Výše ses dozvěděl/a, jak sezení přibližně probíhá, ale&nbsp;ráda bych zmínila pár základních rozdílů mezi klasickou sportovní, tantrickou a&nbsp;mojí masáží.</p>
-                    <p>Součástí této masáže je&nbsp;často práce s&nbsp;tělem v&nbsp;jeho přirozenosti, tedy bez&nbsp;oblečení. Nahota u&nbsp;obou stran umožňuje hlubší uvolnění, důvěru a&nbsp;otevřenost — zároveň to ale&nbsp;není povinnost, vždy respektuji tvé hranice, komfort a&nbsp;pocit bezpečí... to je&nbsp;na&nbsp;prvním místě.</p>
-                    <p>Vedu tě do&nbsp;aktivního přijímání, kdy je&nbsp;vítaný jakýkoli somatický projev — od&nbsp;hlubokého dechu po pláč, smích nebo křik.</p>
-                    <p>Celostní smyslná masáž může být velice podobná tantrické masáži, kterou možná znáš, ale&nbsp;součástí této masáže není masáž intimních partií. Rozhodla jsem se&nbsp;tuto část vynechat, protože chci, aby sezení se&nbsp;mnou bylo bez&nbsp;očekávání nějakého pomyslného finále nebo konce.</p>
-                    <p>Mým cílem je&nbsp;zprostředkovat zážitek, který dokáže probudit citlivost v&nbsp;každé části tvého těla. Je&nbsp;to moment, kdy si&nbsp;můžeš dovolit cítit živost a&nbsp;radost skrze dotyk a&nbsp;vědomou pozornost zaměřenou pouze na&nbsp;sebe a&nbsp;to, co&nbsp;právě ve&nbsp;svém těle cítíš.</p>
-                </div>
-                <h4 class="massage-comparison-heading">Proč se&nbsp;nejedná o&nbsp;klasickou sportovní ani&nbsp;tantrickou masáž, jak ji známe</h4>
-                <div class="massage-comparison-row">
-                    <div class="massage-comparison-item">
-                        <p>Sportovní masáž asi všichni známe a&nbsp;většina ji někdy zažila. Standardně ulevuje od&nbsp;fyzické bolesti a&nbsp;slouží k&nbsp;uvolnění svalů. Soustředí se&nbsp;primárně na&nbsp;to fyzické tělo, i&nbsp;když celý tenhle proces může být velice relaxační a&nbsp;uklidňující.</p>
-                    </div>
-                    <div class="massage-comparison-item">
-                        <p>Tantra je&nbsp;duchovní filozofie, která se&nbsp;zabývá mnohem širším spektrem než&nbsp;jsou masáže — například prací s&nbsp;mantrami, jógou, rituály, meditací. Práce se&nbsp;sexualitou v&nbsp;této formě je&nbsp;pouze jedna určitá část téhle nauky. Název tantra masáže se&nbsp;používá jako obecně známý termín pro&nbsp;tento druh masáže a&nbsp;práce s&nbsp;energií, ale&nbsp;jedná se&nbsp;spíše o&nbsp;modernější neo tantru než&nbsp;původní tantru. Součástí těchto masáží jsou často intimní masáže (yoni, lingam a&nbsp;anální masáž nebo masáže prostaty). Bohužel se&nbsp;pojem tantra masáže začal používat i&nbsp;v kontextu erotických a&nbsp;sexuálních masáží... Při&nbsp;správném provedení se&nbsp;jedná ve&nbsp;zkratce o&nbsp;masáž zaměřenou na&nbsp;probuzení sexuální energie a&nbsp;jejího vědomého prožívání, práci s&nbsp;dechem, vědomým dotykem a&nbsp;plnou přítomností.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- O mně -->
-    <section class="about" id="o-mne">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="images/about.jpg" alt="O mně" class="about-photo">
-                </div>
-                <div class="about-content">
-                    <div class="about-header">
-                        <span class="section-label">O mně</span>
-                        <h2>AHOJ, JÁ JSEM KAROLÍNA</h2>
-                    </div>
-                    <div class="about-text">
-                        <p class="about-lead">Skrze svojí vlastní, někdy dost kostrbatou cestu dospívání jsem se&nbsp;v&nbsp;relativně brzkém věku dostala k&nbsp;tématům jako tantra nebo vědomé milování. Moje fascinace vztahy a&nbsp;lidskou sexualitou s&nbsp;postupem času rostla, ale&nbsp;přišlo mi, že&nbsp;jsem znala spoustu teorie, ale&nbsp;nežila jsem to.</p>
-                        <p>Přes všechny informace, které jsem měla v&nbsp;hlavě jsem se&nbsp;plácala v&nbsp;podivných vztazích, které neměli žádný směr ani&nbsp;smysl. Moje srdce i&nbsp;tělo chtělo „něco víc". Chtěla jsem zažívat to, o&nbsp;čem jsem se&nbsp;neustále učila, o&nbsp;čem jsem četla a&nbsp;poslouchala, ale&nbsp;moje hlava mě pořád držela zpátky.</p>
-                        <p>Opravdová změna nastala, když jsem dala prostor svému tělu a&nbsp;přestala nad&nbsp;věcmi tolik přemýšlet hlavou, ale&nbsp;nechala promluvit svoje tělo. Moje zvědavost a&nbsp;touha se&nbsp;tomuto tématu věnovat pořád hlouběji mě zavedla na&nbsp;kurz Core Touch — výcvik celostních smyslných masáží. Tady do&nbsp;sebe všechny dílky zapadly a&nbsp;já věděla, že&nbsp;tohle je&nbsp;forma, jakou chci práci se&nbsp;vztahy a&nbsp;sexualitou předávat dál.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Stále váháš -->
     <section class="hesitation-section">
         <div class="container">
@@ -346,9 +408,28 @@
                         <span>SE CHCEŠ DO TÉHLE PRÁCE PONOŘIT PRÁVĚ SE MNOU?</span>
                     </div>
                 </div>
-                <p class="service-hesitation-text">Ráda si&nbsp;s&nbsp;tebou domluvím bezplatný, zcela nezávazný hovor na&nbsp;cca 15&nbsp;minut, kde si&nbsp;můžeš lépe nacítit, jestli ti je&nbsp;příjemná moje společnost a&nbsp;energie. Můžeme se&nbsp;podívat na&nbsp;to, jestli je&nbsp;pro tebe tahle session momentálně vhodná, a&nbsp;také ti můžu odpovědět na&nbsp;otázky, které by tě ohledně masáže zajímaly.</p>
+                <p class="service-hesitation-text">Napiš mi na&nbsp;můj Instagram <a href="https://www.instagram.com/roots_of_touch?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">@roots_of_touch</a>, kde ti ráda odpovím na&nbsp;otázky, které by tě ohledně našeho setkání zajímaly. Také tam najdeš spoustu obsahu a&nbsp;nejrůznějších videí, která ti můžou pomoci víc nacítit moji energii a&nbsp;to, jestli by ti byla moje přítomnost příjemná. Případně můžeš využít email <a href="mailto:masaze.rootsoftouch@gmail.com">masaze.rootsoftouch@gmail.com</a>.</p>
             </div>
-            <p class="hesitation-disclaimer">Všechny masáže a&nbsp;rituály, které nabízím, nejsou náhradou za odbornou lékařskou, psychoterapeutickou ani&nbsp;fyzioterapeutickou péči. Jedná se&nbsp;o&nbsp;somatickou práci s&nbsp;tělem, vědomým dotykem, energiemi a&nbsp;osobním prožitkem, nikoli o&nbsp;zdravotní či erotickou službu.</p>
+        </div>
+    </section>
+
+    <!-- Rezervace -->
+    <section class="booking-section" id="rezervace">
+        <div class="container">
+            <span class="section-label">Rezervace</span>
+            <h2>REZERVACE</h2>
+            <p class="booking-section-text">Pro rezervaci svého termínu mi&nbsp;napiš<br>na&nbsp;e-mailovou adresu <a href="mailto:masaze.rootsoftouch@gmail.com">masaze.rootsoftouch@gmail.com</a><br>nebo na&nbsp;Instagram <a href="https://www.instagram.com/roots_of_touch?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">@roots_of_touch</a>.<br>Do&nbsp;zprávy nezapomeň přiložit své telefonní číslo a&nbsp;já se&nbsp;ti brzy ozvu s&nbsp;nejbližšími volnými termíny.</p>
+
+            <div class="booking-policy">
+                <h3 class="booking-policy-title">Rezervační poplatek</h3>
+                <p>Rezervační poplatek činí 1&nbsp;000&nbsp;Kč, který se&nbsp;následně započítává do&nbsp;celkové ceny masáže. Zbývající částku doplatíš na&nbsp;místě.</p>
+
+                <h3 class="booking-policy-title">Storno podmínky</h3>
+                <p>Zrušení rezervace více než&nbsp;72&nbsp;hodin předem — vracím 100&nbsp;% rezervačního poplatku (1&nbsp;000&nbsp;Kč).</p>
+                <p>Zrušení rezervace méně než&nbsp;72&nbsp;hodin předem — účtuji 50&nbsp;% z&nbsp;ceny rezervačního poplatku, tedy 500&nbsp;Kč.</p>
+                <p>Zrušení rezervace méně než&nbsp;48&nbsp;hodin předem — účtuji 100&nbsp;% z&nbsp;ceny rezervačního poplatku, tedy 1&nbsp;000&nbsp;Kč.</p>
+                <p class="booking-policy-note">(Jedná se&nbsp;pouze o&nbsp;částku za&nbsp;pronájem prostoru, kde jsou smluveny tyto storno podmínky. Děkuji za&nbsp;pochopení.)</p>
+            </div>
         </div>
     </section>
 
@@ -360,6 +441,7 @@
                 <p class="footer-copy">&copy; 2026 Roots of Touch. Všechna práva vyhrazena.</p>
             </div>
             <div class="footer-legal">
+                <p>Všechny masáže a&nbsp;rituály, které nabízím, nejsou náhradou za&nbsp;odbornou lékařskou, psychoterapeutickou ani&nbsp;fyzioterapeutickou péči. Jedná se&nbsp;o&nbsp;somatickou práci s&nbsp;tělem, vědomým dotykem, energiemi a&nbsp;osobním prožitkem, nikoli o&nbsp;zdravotní či erotickou službu.</p>
                 <p><strong>Upozornění dle zákona č. 372/2011 Sb., o&nbsp;zdravotních službách</strong><br>
                 Poskytované služby jsou relaxačními a&nbsp;wellness službami. Nepředstavují zdravotní péči ve&nbsp;smyslu zákona č. 372/2011 Sb. a&nbsp;nejsou náhradou lékařského vyšetření, diagnózy ani&nbsp;léčby. Při&nbsp;přetrvávajících nebo závažných zdravotních obtížích vyhledejte odbornou lékařskou pomoc. Před návštěvou mě prosím informujte o&nbsp;svém zdravotním stavu, zejména o&nbsp;případných kontraindikacích.</p>
             </div>

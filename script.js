@@ -60,12 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Scroll animations ---
-    const fadeElements = document.querySelectorAll(
-        '.intro-text, .intro-card, .services-header, .service-card, .about-image, .about-content, .booking-header, .booking-form, .booking-contact'
-    );
-
-    fadeElements.forEach(el => el.classList.add('fade-in'));
-
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach(entry => {
@@ -76,12 +70,38 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         },
         {
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
         }
     );
 
-    fadeElements.forEach(el => observer.observe(el));
+    // Jednotlivé elementy — každý se zobrazí samostatně
+    const fadeElements = document.querySelectorAll(
+        '.intro-text h3, .intro-text p, .services-header, .about-image, .about-header, .about-text, .booking-header, .booking-form, .booking-contact, .massage-comparison, .massage-comparison-title, .massage-comparison-intro, .why-me h2, .why-me p, .expectations-col, .section-label'
+    );
+    fadeElements.forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
+
+    // Stagger — skupiny se zobrazují postupně za sebou
+    const staggerGroups = [
+        '.intro-card',
+        '.service-step',
+        '.service-for-whom-grid > div',
+        '.massage-comparison-row .massage-comparison-item',
+        '.review-card',
+        '.expectations-col',
+        '.booking-contact > *',
+    ];
+
+    staggerGroups.forEach(selector => {
+        document.querySelectorAll(selector).forEach((el, i) => {
+            el.classList.add('fade-in');
+            el.style.transitionDelay = `${i * 0.18}s`;
+            observer.observe(el);
+        });
+    });
 
     // --- Booking form: set min date to today ---
     const dateInput = document.getElementById('booking-date');
