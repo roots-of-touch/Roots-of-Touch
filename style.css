@@ -1295,6 +1295,14 @@ p {
     line-height: 1.7;
 }
 
+.reviews-carousel-wrapper {
+    position: relative;
+}
+
+.reviews-next-btn {
+    display: none;
+}
+
 .reviews-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1660,6 +1668,7 @@ p {
     font-size: 1rem;
     line-height: 1.8;
     color: var(--color-text-soft);
+    text-align: center;
 }
 
 .booking-section-text a {
@@ -1830,6 +1839,7 @@ p {
 
     .about-certs {
         margin-top: 0;
+        margin-left: calc(0.5rem + 0.5cm);
     }
 
     .about-cert-item:nth-child(2) img {
@@ -1848,18 +1858,43 @@ p {
         padding: 0 1.25rem;
     }
 
-    /* --- Odstavce do bloku --- */
-    p,
-    .massage-comparison-intro p,
-    .massage-comparison p,
-    .service-hesitation-text,
-    .about-content p,
-    .about-text p,
-    .why-me p,
-    .intro-text p {
-        text-align: justify;
-        hyphens: manual;
-        -webkit-hyphens: manual;
+    /* Reviews — carousel on mobile */
+    .reviews-grid {
+        display: block;
+        grid-template-columns: unset;
+    }
+
+    .reviews-grid .review-card {
+        display: none;
+    }
+
+    .reviews-grid .review-card.carousel-active {
+        display: block;
+    }
+
+    .reviews-next-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-top: var(--space-sm);
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background: none;
+        border: 1.5px solid var(--color-sage);
+        cursor: pointer;
+        color: var(--color-sage);
+        padding: 0;
+    }
+
+    .reviews-next-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .booking-section-text {
+        text-align: center;
     }
 
     /* --- Navigation --- */
@@ -1982,7 +2017,7 @@ p {
         padding-top: var(--space-lg);
     }
 
-    /* Reviews — stack on mobile */
+    /* Reviews — stack on tablet */
     .reviews-grid {
         grid-template-columns: 1fr;
         gap: var(--space-md) 0;

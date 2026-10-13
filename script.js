@@ -171,4 +171,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Reviews carousel (mobile only) ---
+    const reviewsGrid = document.querySelector('.reviews-grid');
+    const nextBtn = document.querySelector('.reviews-next-btn');
+    if (reviewsGrid && nextBtn) {
+        const cards = Array.from(reviewsGrid.querySelectorAll('.review-card'));
+        let current = 0;
+
+        const isMobile = () => window.innerWidth <= 768;
+
+        const init = () => {
+            if (isMobile()) {
+                cards.forEach((c, i) => c.classList.toggle('carousel-active', i === 0));
+            } else {
+                cards.forEach(c => c.classList.remove('carousel-active'));
+            }
+        };
+
+        const goTo = (index) => {
+            if (!isMobile()) return;
+            current = (index + cards.length) % cards.length;
+            cards.forEach((c, i) => c.classList.toggle('carousel-active', i === current));
+        };
+
+        nextBtn.addEventListener('click', () => goTo(current + 1));
+        window.addEventListener('resize', init);
+        init();
+    }
+
 });
