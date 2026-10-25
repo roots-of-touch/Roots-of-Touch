@@ -1279,6 +1279,22 @@ p {
     background: #d4c4b2;
 }
 
+.about-cta-mobile {
+    display: none;
+}
+
+.about-cta-desktop,
+.about-cta-mobile {
+    background: rgba(164, 180, 148, 0.22);
+    color: var(--color-text-soft);
+}
+
+.about-cta-desktop:hover,
+.about-cta-mobile:hover {
+    background: var(--color-sage-soft);
+}
+
+
 /* Reviews grid */
 .reviews-section {
     padding: var(--space-xl) 0;
@@ -1300,7 +1316,33 @@ p {
 }
 
 .reviews-next-btn {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-top: var(--space-sm);
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background: var(--color-sage);
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 0;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.reviews-next-btn:hover {
+    background: var(--color-text);
+}
+
+.reviews-next-btn:active {
+    transform: scale(0.92);
+}
+
+.reviews-next-btn svg {
+    width: 18px;
+    height: 18px;
 }
 
 .reviews-grid {
@@ -1308,6 +1350,14 @@ p {
     grid-template-columns: repeat(3, 1fr);
     gap: 0 var(--space-lg);
     align-items: start;
+}
+
+.reviews-grid .review-card {
+    display: none;
+}
+
+.reviews-grid .review-card.carousel-active {
+    display: block;
 }
 
 .review-card {
@@ -1687,6 +1737,73 @@ p {
     color: var(--color-text-muted);
 }
 
+.contact-section {
+    padding: var(--space-lg) 0 var(--space-xl);
+    text-align: center;
+}
+
+.contact-items {
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: left;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    font-size: 0.95rem;
+    color: var(--color-text-soft);
+    text-decoration: none;
+}
+
+a.contact-item {
+    color: var(--color-text-soft);
+    transition: color var(--transition);
+}
+
+a.contact-item:hover {
+    color: var(--color-sage);
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid #c4b89a;
+    flex-shrink: 0;
+    color: var(--color-sage);
+    transition: border-color var(--transition), color var(--transition);
+}
+
+a.contact-item:hover .contact-icon {
+    border-color: var(--color-sage);
+}
+
+.contact-address-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.contact-place-name {
+    font-weight: 400;
+    color: var(--color-text-soft);
+}
+
+.contact-street {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.storno-section {
+    padding-bottom: var(--space-xl);
+}
+
 .booking-policy {
     max-width: 620px;
     margin: var(--space-xl) auto 0;
@@ -1828,7 +1945,9 @@ p {
     .about-header       { order: 2; }
     .about-text         { order: 3; }
     .about-certs        { order: 4; }
-    .about-action-photo { order: 5; }
+    .about-cta-mobile   { display: block; }
+    .about-cta-desktop  { display: none; }
+    .about-action-photo { order: 6; }
 
     .about-photo {
         width: 100%;
@@ -1858,39 +1977,10 @@ p {
         padding: 0 1.25rem;
     }
 
-    /* Reviews — carousel on mobile */
+    /* Reviews — single column on mobile */
     .reviews-grid {
         display: block;
         grid-template-columns: unset;
-    }
-
-    .reviews-grid .review-card {
-        display: none;
-    }
-
-    .reviews-grid .review-card.carousel-active {
-        display: block;
-    }
-
-    .reviews-next-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: auto;
-        margin-top: var(--space-sm);
-        width: 2.5rem;
-        height: 2.5rem;
-        border-radius: 50%;
-        background: none;
-        border: 1.5px solid var(--color-sage);
-        cursor: pointer;
-        color: var(--color-sage);
-        padding: 0;
-    }
-
-    .reviews-next-btn svg {
-        width: 18px;
-        height: 18px;
     }
 
     .booking-section-text {

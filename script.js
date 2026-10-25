@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Reviews carousel (mobile only) ---
+    // --- Reviews carousel ---
     const reviewsGrid = document.querySelector('.reviews-grid');
     const nextBtn = document.querySelector('.reviews-next-btn');
     if (reviewsGrid && nextBtn) {
@@ -179,19 +179,24 @@ document.addEventListener('DOMContentLoaded', () => {
         let current = 0;
 
         const isMobile = () => window.innerWidth <= 768;
+        const visibleCount = () => isMobile() ? 1 : 3;
 
         const init = () => {
-            if (isMobile()) {
-                cards.forEach((c, i) => c.classList.toggle('carousel-active', i === 0));
-            } else {
-                cards.forEach(c => c.classList.remove('carousel-active'));
-            }
+            current = 0;
+            const count = visibleCount();
+            cards.forEach((c, i) => c.classList.toggle('carousel-active', i < count));
         };
 
         const goTo = (index) => {
-            if (!isMobile()) return;
+            const count = visibleCount();
             current = (index + cards.length) % cards.length;
-            cards.forEach((c, i) => c.classList.toggle('carousel-active', i === current));
+            cards.forEach((c, i) => {
+                let active = false;
+                for (let j = 0; j < count; j++) {
+                    if (i === (current + j) % cards.length) active = true;
+                }
+                c.classList.toggle('carousel-active', active);
+            });
         };
 
         nextBtn.addEventListener('click', () => goTo(current + 1));
