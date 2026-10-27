@@ -204,6 +204,37 @@ document.addEventListener('DOMContentLoaded', () => {
         init();
     }
 
+    // --- Contact form async submit ---
+    const contactForm = document.querySelector('.contact-form');
+    const contactSuccess = document.querySelector('.contact-form-success');
+    if (contactForm && contactSuccess) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = contactForm.querySelector('.contact-form-submit');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Odesílám...';
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    contactForm.hidden = true;
+                    contactSuccess.removeAttribute('hidden');
+                } else {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Odeslat zprávu';
+                    alert('Něco se nepovedlo. Zkus to prosím znovu.');
+                }
+            } catch {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Odeslat zprávu';
+                alert('Něco se nepovedlo. Zkus to prosím znovu.');
+            }
+        });
+    }
+
     // --- About section expand (mobile only) ---
     const aboutBtn = document.querySelector('.about-expand-btn');
     const aboutPanel = document.querySelector('.about-expandable');

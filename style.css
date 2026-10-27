@@ -1803,6 +1803,30 @@ p {
     color: #fff;
 }
 
+.contact-form-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-xl) var(--space-md);
+    flex: 1;
+}
+
+.contact-form-success-title {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--color-sage);
+    margin-bottom: var(--space-sm);
+}
+
+.contact-form-success-text {
+    color: var(--color-text-soft);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
 .step-subtitle {
     font-weight: 400;
     font-size: 0.85em;
