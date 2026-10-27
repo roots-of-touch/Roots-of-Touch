@@ -1895,13 +1895,13 @@ p {
     letter-spacing: 0.08em;
     font-family: var(--font-sans);
     font-weight: 500;
-    margin-top: 0;
-    margin-bottom: var(--space-lg);
+    margin: 0;
     padding: 1.25rem var(--space-md);
     background: #ede5da;
     color: var(--color-text-soft);
     text-align: center;
     display: block;
+    width: 100%;
 }
 
 .contact-items {
