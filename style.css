@@ -373,25 +373,6 @@ p {
     border-color: rgba(255, 255, 255, 0.7);
 }
 
-.hero-scroll {
-    position: absolute;
-    bottom: var(--space-lg);
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-.hero-scroll-line {
-    width: 1px;
-    height: 60px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
-    animation: scrollLine 2s ease-in-out infinite;
-}
-
-@keyframes scrollLine {
-    0%, 100% { opacity: 0.3; transform: scaleY(0.5); transform-origin: top; }
-    50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
-}
 
 
 /* --- Intro Section --- */
