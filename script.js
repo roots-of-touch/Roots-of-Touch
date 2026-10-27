@@ -204,4 +204,24 @@ document.addEventListener('DOMContentLoaded', () => {
         init();
     }
 
+    // --- About section expand (mobile only) ---
+    const aboutBtn = document.querySelector('.about-expand-btn');
+    const aboutPanel = document.querySelector('.about-expandable');
+    if (aboutBtn && aboutPanel) {
+        aboutBtn.addEventListener('click', () => {
+            const isOpen = aboutPanel.classList.toggle('is-open');
+            aboutBtn.setAttribute('aria-expanded', isOpen);
+        });
+    }
+
+    // --- Celostní section expand (mobile only) ---
+    const celostniBtn = document.querySelector('.celostni-expand-btn');
+    const celostniPanel = document.querySelector('.celostni-expandable');
+    if (celostniBtn && celostniPanel) {
+        celostniBtn.addEventListener('click', () => {
+            const isOpen = celostniPanel.classList.toggle('is-open');
+            celostniBtn.setAttribute('aria-expanded', isOpen);
+        });
+    }
+
 });

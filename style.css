@@ -594,24 +594,9 @@ p {
     margin: 0 auto;
 }
 
-[data-panel="muzi"]::before,
-[data-panel="zeny"]::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    pointer-events: none;
-    z-index: 0;
-}
-
-[data-panel="muzi"]::before {
-    background-image: url('images/men-bg.jpg');
-    background-position: center;
-}
-
-[data-panel="zeny"]::before {
-    background-image: url('images/women-bg.jpg');
-    background-position: center top;
+[data-panel="muzi"],
+[data-panel="zeny"] {
+    background: #ede5da;
 }
 
 [data-panel="muzi"] .service-card-inner,
@@ -1052,8 +1037,8 @@ p {
     padding: var(--space-lg);
     background-color: rgba(164, 180, 148, 0.1);
     border-radius: 16px;
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0;
 }
 
 .service-hesitation-title {
@@ -1062,7 +1047,7 @@ p {
     font-weight: 500;
     letter-spacing: 0.15em;
     margin-bottom: var(--space-md);
-    text-align: center;
+    text-align: left;
 }
 
 .service-hesitation-text {
@@ -1158,6 +1143,12 @@ p {
 
 .celostni-text p:last-child {
     margin-bottom: 0;
+}
+
+.celostni-highlight {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.15em;
 }
 
 @media (min-width: 769px) {
@@ -1703,13 +1694,14 @@ p {
 /* --- Footer --- */
 /* Booking section */
 .booking-section {
-    padding: var(--space-xl) 0;
+    padding: var(--space-xl) 0 var(--space-sm) 0;
     text-align: center;
 }
 
 .booking-section h2 {
     margin-top: var(--space-xs);
     margin-bottom: var(--space-md);
+    font-size: clamp(1.4rem, 3.5vw, 2.2rem);
 }
 
 .booking-section-text {
@@ -1731,15 +1723,185 @@ p {
     color: var(--color-text);
 }
 
+.contact-form {
+    max-width: 500px;
+    margin: var(--space-md) 0 0;
+    text-align: left;
+}
+
+.contact-booking-right .contact-form {
+    max-width: none;
+}
+
+.contact-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: var(--space-sm);
+}
+
+.contact-form-field label {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.contact-form-field input,
+.contact-form-field textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(164, 180, 148, 0.5);
+    border-radius: 0;
+    padding: 0.6rem 0;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--color-text);
+    outline: none;
+    transition: border-color var(--transition);
+    resize: none;
+    box-sizing: border-box;
+}
+
+.contact-form-field textarea {
+    border: 1px solid rgba(164, 180, 148, 0.4);
+    border-radius: 4px;
+    padding: 0.8rem 1rem;
+    margin-top: 0.2rem;
+}
+
+.contact-form-field input::placeholder,
+.contact-form-field textarea::placeholder {
+    color: var(--color-text-muted);
+    opacity: 0.7;
+}
+
+.contact-form-field input:focus,
+.contact-form-field textarea:focus {
+    border-color: var(--color-sage);
+}
+
+.contact-form-submit {
+    margin-top: var(--space-sm);
+    display: inline-block;
+    padding: 0.85rem 2.5rem;
+    background: transparent;
+    border: 1px solid var(--color-sage);
+    color: var(--color-sage);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background var(--transition), color var(--transition);
+}
+
+.contact-form-submit:hover {
+    background: var(--color-sage);
+    color: #fff;
+}
+
 .step-subtitle {
     font-weight: 400;
     font-size: 0.85em;
     color: var(--color-text-muted);
 }
 
-.contact-section {
-    padding: var(--space-lg) 0 var(--space-xl);
+.contact-booking-section {
+    padding: var(--space-md) 0 var(--space-xl);
+}
+
+.contact-booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+        "heading heading"
+        "text    form"
+        "contact form";
+    gap: 0;
+}
+
+.cb-heading {
+    grid-area: heading;
     text-align: center;
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid rgba(164, 180, 148, 0.3);
+    margin-bottom: var(--space-md);
+}
+
+.cb-text {
+    grid-area: text;
+    padding-right: var(--space-xl);
+    text-align: left;
+}
+
+.cb-text .booking-section-text {
+    text-align: left;
+    margin: 0;
+    max-width: none;
+}
+
+.cb-contact {
+    grid-area: contact;
+    padding-right: var(--space-xl);
+    padding-top: var(--space-md);
+    text-align: left;
+}
+
+.cb-form {
+    grid-area: form;
+    grid-row: 2 / 4;
+    padding-left: var(--space-xl);
+    border-left: 1px solid rgba(164, 180, 148, 0.35);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.cb-form .contact-form {
+    max-width: none;
+    margin-top: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cb-form .contact-form-field:last-of-type {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cb-form .contact-form-field:last-of-type textarea {
+    flex: 1;
+    min-height: 80px;
+}
+
+.contact-heading {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-sage);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+.booking-section-h2 {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: var(--space-lg);
+    padding: 1.25rem var(--space-md);
+    background: #ede5da;
+    color: var(--color-text-soft);
+    text-align: center;
+    display: block;
 }
 
 .contact-items {
@@ -1801,15 +1963,22 @@ a.contact-item:hover .contact-icon {
 }
 
 .storno-section {
-    padding-bottom: var(--space-xl);
+    padding: var(--space-xl) 0;
+}
+
+.storno-hesitation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
 }
 
 .booking-policy {
-    max-width: 620px;
-    margin: var(--space-xl) auto 0;
+    max-width: none;
+    margin: 0;
     text-align: left;
-    padding-top: var(--space-lg);
-    border-top: 1px solid #c8d9bc;
+    padding-top: 0;
+    border-top: none;
 }
 
 .booking-policy-title {
@@ -1836,6 +2005,19 @@ a.contact-item:hover .contact-icon {
     font-size: 0.8rem !important;
     color: var(--color-text-muted) !important;
     font-style: italic;
+}
+
+.booking-policy-disclaimer {
+    margin-top: var(--space-lg);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--color-text-soft);
+}
+
+@media (min-width: 769px) {
+    .booking-policy-disclaimer {
+        margin-top: calc(var(--space-lg) + 2cm);
+    }
 }
 
 .footer {
@@ -1885,6 +2067,91 @@ a.contact-item:hover .contact-icon {
 
 .footer-legal strong {
     font-weight: 500;
+    opacity: 1;
+}
+
+/* --- About section expand (mobile only) --- */
+.about-expand-btn {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: var(--space-sm) 0 var(--space-md);
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: var(--color-sage);
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.about-expand-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 0.25em;
+}
+
+.about-expand-btn[aria-expanded="true"] .about-expand-arrow {
+    transform: rotate(180deg);
+}
+
+.about-expandable {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+
+.about-expandable.is-open {
+    max-height: 3000px;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .about-expand-btn {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* --- Celostní section expand (mobile only) --- */
+.celostni-expand-btn {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: var(--space-sm) auto var(--space-md);
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: var(--color-sage);
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-align: center;
+    width: 100%;
+}
+
+.celostni-expand-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 0.25em;
+}
+
+.celostni-expand-btn[aria-expanded="true"] .celostni-expand-arrow {
+    transform: rotate(180deg);
+}
+
+.celostni-expandable {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+
+.celostni-expandable.is-open {
+    max-height: 3000px;
     opacity: 1;
 }
 
@@ -1975,6 +2242,79 @@ a.contact-item:hover .contact-icon {
     /* --- Container --- */
     .container {
         padding: 0 1.25rem;
+    }
+
+    /* Contact + Booking — single column on mobile, original order */
+    .contact-booking-section {
+        padding-top: 0;
+        margin-top: -1rem;
+    }
+
+    .contact-booking-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "contact"
+            "heading"
+            "text"
+            "form";
+        gap: 0;
+    }
+
+    .cb-heading,
+    .cb-text,
+    .cb-contact,
+    .cb-form {
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+        text-align: center;
+    }
+
+    .cb-contact {
+        padding-top: 0;
+        padding-bottom: var(--space-xl);
+        border-top: none;
+    }
+
+    .cb-heading {
+        padding-bottom: var(--space-md);
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .cb-text {
+        padding-bottom: var(--space-lg);
+    }
+
+    .cb-text .booking-section-text {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 620px;
+    }
+
+    .cb-form {
+        padding-top: 0;
+        grid-row: auto;
+        display: block;
+    }
+
+    .cb-form .contact-form {
+        flex: unset;
+        display: block;
+    }
+
+    .cb-form .contact-form-field:last-of-type {
+        flex: unset;
+        display: flex;
+    }
+
+    .cb-form .contact-form-field:last-of-type textarea {
+        flex: unset;
+    }
+
+    .contact-items {
+        display: inline-flex;
     }
 
     /* Reviews — single column on mobile */
@@ -2127,6 +2467,12 @@ a.contact-item:hover .contact-icon {
     }
 
 
+    /* --- Storno + hesitation grid — stack --- */
+    .storno-hesitation-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
     /* --- Hesitation grid — stack --- */
     .service-hesitation-grid {
         grid-template-columns: 1fr;
@@ -2134,6 +2480,8 @@ a.contact-item:hover .contact-icon {
     }
 
     .service-hesitation {
+        max-width: 100%;
+        margin: 0 auto;
         padding: 1.5rem;
     }
 

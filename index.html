@@ -43,7 +43,6 @@
                 <li><a href="#uvod" class="nav-link active">Úvod</a></li>
                 <li><a href="#sluzby" class="nav-link">Služby</a></li>
                 <li><a href="#o-mne" class="nav-link">O mně</a></li>
-                <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
                 <li><a href="#rezervace" class="nav-link">Rezervace</a></li>
             </ul>
         </div>
@@ -61,7 +60,6 @@
             <h1 class="hero-title">Návrat k&nbsp;sobě<br><span class="hero-title-sub">skrze vlastní tělo</span></h1>
             <p class="hero-desc">Pojď se&nbsp;mnou prozkoumat svůj vnitřní svět. Tentokrát ne skrze další slova, ale&nbsp;svoje vlastní tělo.
                 Vítám Tě na&nbsp;této cestě. </p>
-            <a href="#sluzby" class="hero-btn">Zjistit více</a>
         </div>
         <div class="hero-scroll">
             <div class="hero-scroll-line"></div>
@@ -298,14 +296,7 @@
             <div class="about-grid">
                 <div class="about-image">
                     <img src="images/about.jpg" alt="Karolína" class="about-photo">
-                    <div class="about-certs">
-                        <div class="about-cert-item">
-                            <img src="images/cert-core-touch-new.jpg" alt="Certifikát Core Touch">
-                        </div>
-                        <div class="about-cert-item">
-                            <img src="images/cert-osvedceni.jpg" alt="Osvědčení o profesní kvalifikaci">
-                        </div>
-                    </div>
+
                 </div>
                 <div class="about-content">
                     <div class="about-header">
@@ -315,17 +306,18 @@
                     <div class="about-text">
                         <p class="about-lead">Téma vztahů a&nbsp;sexuality pro&nbsp;mě bylo velkým a&nbsp;bolavým tématem. Vždycky jsem byla hodně vnímavá a&nbsp;citlivá vůči svému okolí, až jsem si&nbsp;během dětství a&nbsp;dospívání vytvořila takové brnění, abych tak intenzivně neprožívala to, co&nbsp;mě bolelo. Ale společně s&nbsp;tím jsem potlačila téměř veškeré své prožívání. Moc jsem toho necítila fyzicky ani psychicky. A&nbsp;přesto mě lidská sexualita a&nbsp;vztahy extrémně fascinovaly.</p>
                         <p>Dotek byl pro&nbsp;mě vždy zvláštní kapitolou. V&nbsp;dětství si&nbsp;nepamatuju moc fyzického kontaktu ani láskyplných objetí s&nbsp;rodiči. Na&nbsp;druhou stranu byly v&nbsp;dětství moje intimní hranice výrazně překročeny způsobem, který by&nbsp;se&nbsp;rozhodně neměl dít. Nejspíš proto jsem dlouhou dobu nedokázala žádný intimní dotek a&nbsp;kontakt přijímat a&nbsp;taky jsem si&nbsp;pečlivě vybírala, komu můj dotek budu dávat. Bylo to&nbsp;pro&nbsp;mě opravdu hodně zranitelné. Společně s&nbsp;tím jsem se&nbsp;kompletně nenáviděla za&nbsp;to, jak vypadám, a&nbsp;říkala si, že&nbsp;mě by&nbsp;se&nbsp;stejně nikdo ani nechtěl dotýkat a&nbsp;přinášelo to&nbsp;pro&nbsp;mě spíš úzkost než potěšení. Později se&nbsp;stal přesný opak — zoufale jsem hledala intimitu v&nbsp;jakékoliv možné podobě a&nbsp;považovala to&nbsp;za&nbsp;volnost a&nbsp;nějakou sexuální liberálnost. Cítila jsem se&nbsp;úplně vyhladovělá po&nbsp;dotyku a&nbsp;fyzické blízkosti. Teď vidím, že&nbsp;touhle „volností" jsem sama sobě jenom víc ubližovala.</p>
-                        <p>Zpětně vím, že&nbsp;jsem se&nbsp;lidí vždy dotýkala celým svým srdcem, jen jsem to&nbsp;dělala nevědomě. Několikrát jsem slyšela, že&nbsp;je můj dotyk jiný než dotyk ostatních lidí a&nbsp;až po&nbsp;letech jsem se&nbsp;dozvěděla, že&nbsp;existuje něco jako vědomý dotek. Já jiný dávat neuměla. A&nbsp;když jsem cítila, že&nbsp;nedokážu dát takový druh doteku — celý, přítomný, srdcem, tak jsem ho nedávala vůbec. Nechtěla jsem nepřítomně sahat na&nbsp;druhé tělo i&nbsp;duši.</p>
-                        <p>Zároveň jsem cítila, že&nbsp;tu přece musí být „něco víc". Neustále jsem s&nbsp;údivem pozorovala, jak prožívají partnerské vztahy a&nbsp;intimitu lidi z&nbsp;mého okolí. A&nbsp;vždycky jsem skončila u&nbsp;toho, že&nbsp;to není nic, po&nbsp;čem bych toužila. A&nbsp;začala jsem to&nbsp;„něco víc" hledat. V&nbsp;knížkách, videích, workshopech, kurzech a&nbsp;později v&nbsp;tom reálném životě. Někdy kolem sedmnácti let jsem se&nbsp;poprvé setkala s&nbsp;pojmy jako tantra, vědomé milování nebo napojování se&nbsp;na&nbsp;svou ženskou energii. Ale několik let to&nbsp;všechno byla jen teorie, kterou jsem měla plnou hlavu, ale&nbsp;nevěděla, jak to&nbsp;žít.</p>
-
-                        <p>A&nbsp;až po&nbsp;těchto všemožných zkušenostech, objevování a&nbsp;učení se&nbsp;jsem začala opravdu ŽÍT to, co&nbsp;žiju dnes.</p>
-
+                        <button class="about-expand-btn" aria-expanded="false">Více o mém příběhu <span class="about-expand-arrow">↓</span></button>
+                        <div class="about-expandable">
+                            <p>Zpětně vím, že&nbsp;jsem se&nbsp;lidí vždy dotýkala celým svým srdcem, jen jsem to&nbsp;dělala nevědomě. Několikrát jsem slyšela, že&nbsp;je můj dotyk jiný než dotyk ostatních lidí a&nbsp;až po&nbsp;letech jsem se&nbsp;dozvěděla, že&nbsp;existuje něco jako vědomý dotek. Já jiný dávat neuměla. A&nbsp;když jsem cítila, že&nbsp;nedokážu dát takový druh doteku — celý, přítomný, srdcem, tak jsem ho nedávala vůbec. Nechtěla jsem nepřítomně sahat na&nbsp;druhé tělo i&nbsp;duši.</p>
+                            <p>Zároveň jsem cítila, že&nbsp;tu přece musí být „něco víc". Neustále jsem s&nbsp;údivem pozorovala, jak prožívají partnerské vztahy a&nbsp;intimitu lidi z&nbsp;mého okolí. A&nbsp;vždycky jsem skončila u&nbsp;toho, že&nbsp;to není nic, po&nbsp;čem bych toužila. A&nbsp;začala jsem to&nbsp;„něco víc" hledat. V&nbsp;knížkách, videích, workshopech, kurzech a&nbsp;později v&nbsp;tom reálném životě. Někdy kolem sedmnácti let jsem se&nbsp;poprvé setkala s&nbsp;pojmy jako tantra, vědomé milování nebo napojování se&nbsp;na&nbsp;svou ženskou energii. Ale několik let to&nbsp;všechno byla jen teorie, kterou jsem měla plnou hlavu, ale&nbsp;nevěděla, jak to&nbsp;žít.</p>
+                            <p>A&nbsp;až po&nbsp;těchto všemožných zkušenostech, objevování a&nbsp;učení se&nbsp;jsem začala opravdu ŽÍT to, co&nbsp;žiju dnes.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <a href="#rezervace" class="service-rezervace-banner about-cta-desktop">Rezervuj si svůj termín →</a>
-        <a href="#rezervace" class="service-rezervace-banner about-cta-mobile">Rezervuj si svůj termín →</a>
+        <a href="#rezervace" class="service-rezervace-banner about-cta-desktop">Rezervuj si svůj termín</a>
+        <a href="#rezervace" class="service-rezervace-banner about-cta-mobile">Rezervuj si svůj termín</a>
     </section>
 
     <!-- Intro section -->
@@ -366,12 +358,17 @@
         <div class="container">
             <h3 class="celostni-heading">Celostní smyslná masáž v&nbsp;mém podání</h3>
             <div class="celostni-text">
-                <p>Vycházím z&nbsp;principu moderní neo tantry a&nbsp;certifikované metody Core Touch. Výše ses dozvěděl/a, jak sezení přibližně probíhá, ale&nbsp;ráda bych zmínila pár základních rozdílů mezi klasickou sportovní, tantrickou a&nbsp;mojí masáží.</p>
-                <p>Součástí této masáže je&nbsp;často práce s&nbsp;tělem v&nbsp;jeho přirozenosti, tedy bez&nbsp;oblečení. Postupná nahota v&nbsp;průběhu masáže u&nbsp;obou stran umožňuje hlubší uvolnění a&nbsp;důvěru — zkrátka otvírá prostor pro&nbsp;to, být takový jací opravdu jsme a&nbsp;jak nás příroda stvořila. Zároveň to ale&nbsp;není povinnost, vždy respektuji tvé hranice, komfort a&nbsp;pocit bezpečí... to je&nbsp;na&nbsp;prvním místě.</p>
-                <p>Vedu tě do&nbsp;aktivního přijímání, kdy je&nbsp;vítaný jakýkoli somatický projev — od&nbsp;hlubokého dechu po pláč, smích nebo křik.</p>
-                <p>Celostní smyslná masáž může být velice podobná tantrické masáži, kterou možná znáš, ale&nbsp;součástí této masáže není masáž intimních partií. Rozhodla jsem se&nbsp;tuto část vynechat, protože chci, aby sezení se&nbsp;mnou bylo bez&nbsp;očekávání nějakého pomyslného finále nebo konce.</p>
-                <p>Mým cílem je&nbsp;zprostředkovat zážitek, který dokáže probudit citlivost v&nbsp;každé části tvého těla. Je&nbsp;to moment, kdy si&nbsp;můžeš dovolit cítit živost a&nbsp;radost skrze dotyk a&nbsp;vědomou pozornost zaměřenou pouze na&nbsp;sebe a&nbsp;to, co&nbsp;právě ve&nbsp;svém těle cítíš a&nbsp;pustit to, co&nbsp;v&nbsp;něm možná už&nbsp;dlouhou dobu držíš.</p>
+                <p>Vycházím z&nbsp;principu moderní neo tantry a&nbsp;certifikované metody Core Touch. Výše ses dozvěděl/a, jak sezení přibližně probíhá.</p>
+                <p><span class="celostni-highlight">ráda bych zmínila pár základních rozdílů mezi klasickou sportovní, tantrickou a&nbsp;mojí masáží.</span></p>
             </div>
+            <button class="celostni-expand-btn" aria-expanded="false">Zjistit více <span class="celostni-expand-arrow">↓</span></button>
+            <div class="celostni-expandable">
+                <div class="celostni-text">
+                    <p>Součástí masáže pro&nbsp;muže je&nbsp;často práce s&nbsp;tělem v&nbsp;jeho přirozenosti, tedy bez&nbsp;oblečení. Postupná nahota v&nbsp;průběhu masáže u&nbsp;obou stran umožňuje hlubší uvolnění a&nbsp;důvěru — zkrátka otvírá prostor pro&nbsp;to, být takový jací opravdu jsme a&nbsp;jak nás příroda stvořila. Zároveň to ale&nbsp;není povinnost, vždy respektuji tvé hranice, komfort a&nbsp;pocit bezpečí... to je&nbsp;na&nbsp;prvním místě.</p>
+                    <p>Vedu tě do&nbsp;aktivního přijímání, kdy je&nbsp;vítaný jakýkoli somatický projev — od&nbsp;hlubokého dechu po pláč, smích nebo křik.</p>
+                    <p>Celostní smyslná masáž může být velice podobná tantrické masáži, kterou možná znáš, ale&nbsp;součástí této masáže není masáž intimních partií. Rozhodla jsem se&nbsp;tuto část vynechat, protože chci, aby sezení se&nbsp;mnou bylo bez&nbsp;očekávání nějakého pomyslného finále nebo konce.</p>
+                    <p>Mým cílem je&nbsp;zprostředkovat zážitek, který dokáže probudit citlivost v&nbsp;každé části tvého těla. Je&nbsp;to moment, kdy si&nbsp;můžeš dovolit cítit živost a&nbsp;radost skrze dotyk a&nbsp;vědomou pozornost zaměřenou pouze na&nbsp;sebe a&nbsp;to, co&nbsp;právě ve&nbsp;svém těle cítíš a&nbsp;pustit to, co&nbsp;v&nbsp;něm možná už&nbsp;dlouhou dobu držíš.</p>
+                </div>
             <div class="massage-comparison">
                 <h4 class="massage-comparison-heading">Proč se&nbsp;nejedná o&nbsp;klasickou sportovní ani&nbsp;tantrickou masáž, jak ji známe</h4>
                 <div class="massage-comparison-row">
@@ -382,6 +379,7 @@
                         <p>Tantra je&nbsp;duchovní filozofie, která se&nbsp;zabývá mnohem širším spektrem než&nbsp;jsou masáže — například prací s&nbsp;mantrami, jógou, rituály, meditací. Práce se&nbsp;sexualitou v&nbsp;této formě je&nbsp;pouze jedna určitá část, kterou jsme si&nbsp;tady na&nbsp;západě převzali. Název tantra masáže se&nbsp;u&nbsp;nás používá jako obecně známý termín pro&nbsp;tento druh masáže a&nbsp;práce s&nbsp;energií, ale&nbsp;jedná se&nbsp;spíše o&nbsp;modernější neo tantru. Proto se&nbsp;nepovažuji úplně za&nbsp;tantrickou masérku, protože na&nbsp;tantru pohlížím z&nbsp;mnohem širší perspektivy než&nbsp;jsou masáže. Součástí tantra masáží jsou často intimní masáže (yoni, lingam nebo anální masáže), které jsem se&nbsp;rozhodla nezařazovat do&nbsp;mých sessions. Bohužel se&nbsp;pojem tantra masáže začal používat i&nbsp;v&nbsp;kontextu erotických a&nbsp;sexuálních masáží... Při&nbsp;správném provedení se&nbsp;hodně ve&nbsp;zkratce jedná o&nbsp;masáž zaměřenou na&nbsp;probuzení sexuální energie (naší životní energie) a&nbsp;jejího vědomého prožívání, práci s&nbsp;dechem, vědomým dotykem a&nbsp;plnou přítomností.</p>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </section>
@@ -411,80 +409,115 @@
         </div>
     </section>
 
-    <!-- Stále váháš -->
-    <section class="hesitation-section">
-        <div class="container">
-            <div class="service-hesitation">
-                <h3 class="service-hesitation-title">STÁLE VÁHÁŠ, JESTLI:</h3>
-                <div class="service-hesitation-grid">
-                    <div class="service-hesitation-left">
-                        <span>JE TOHLE PRO TEBE TA SPRÁVNÁ VOLBA?</span>
-                    </div>
-                    <div class="service-hesitation-right">
-                        <span>SE CHCEŠ DO TÉHLE PRÁCE PONOŘIT PRÁVĚ SE MNOU?</span>
-                    </div>
-                </div>
-                <p class="service-hesitation-text">Napiš mi na&nbsp;můj Instagram, kde ti ráda odpovím na&nbsp;otázky, které by tě ohledně našeho setkání zajímaly. Také tam najdeš spoustu obsahu a&nbsp;nejrůznějších videí, která ti můžou pomoci víc nacítit moji energii a&nbsp;to, jestli by ti byla moje přítomnost příjemná. Pokud nepoužíváš Instagram nebo jiné sociální sítě, můžeš mě kontaktovat e-mailem.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Kontaktní údaje -->
-    <section class="contact-section" id="kontakt">
+    <!-- Kontakt + Rezervace -->
+    <section class="contact-booking-section" id="kontakt">
         <div class="container">
-            <div class="contact-items">
-                <a class="contact-item" href="mailto:masaze.rootsoftouch@gmail.com">
-                    <span class="contact-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
-                    </span>
-                    <span>masaze.rootsoftouch@gmail.com</span>
-                </a>
-                <a class="contact-item" href="https://www.instagram.com/roots_of_touch?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
-                    <span class="contact-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-                    </span>
-                    <span>@roots_of_touch</span>
-                </a>
-                <a class="contact-item" href="https://www.facebook.com/share/1FXoR63i59/?mibextid=wwXIfr" target="_blank" rel="noopener">
-                    <span class="contact-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-                    </span>
-                    <span>roots_of_touch</span>
-                </a>
-                <div class="contact-item">
-                    <span class="contact-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                    </span>
-                    <span class="contact-address-block">
-                        <span class="contact-place-name">Centrum Unity</span>
-                        <span class="contact-street">Šmilovského, Praha&nbsp;2 – Vinohrady</span>
-                    </span>
+            <div class="contact-booking-grid">
+
+                <!-- Oblast A: Nadpis přes celou šířku -->
+                <div class="cb-heading" id="rezervace">
+                    <h2 class="booking-section-h2">REZERVUJ SI SVŮJ TERMÍN</h2>
                 </div>
+
+                <!-- Oblast T: Text pod nadpisem (vlevo) -->
+                <div class="cb-text">
+                    <p class="booking-section-text">Svůj termín si&nbsp;můžeš domluvit skrze rezervační formulář níže nebo přes Instagram. Do&nbsp;zprávy mi&nbsp;napiš tebou preferovaný termín a&nbsp;já se&nbsp;ti brzy ozvu.</p>
+                </div>
+
+                <!-- Oblast B: Kontaktní údaje (vlevo dole na desktopu) -->
+                <div class="cb-contact">
+                    <h3 class="contact-heading">Kontaktní údaje</h3>
+                    <div class="contact-items">
+                        <a class="contact-item" href="mailto:masaze.rootsoftouch@gmail.com">
+                            <span class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+                            </span>
+                            <span>masaze.rootsoftouch@gmail.com</span>
+                        </a>
+                        <a class="contact-item" href="https://www.instagram.com/roots_of_touch?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
+                            <span class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                            </span>
+                            <span>@roots_of_touch</span>
+                        </a>
+                        <a class="contact-item" href="https://www.facebook.com/share/1FXoR63i59/?mibextid=wwXIfr" target="_blank" rel="noopener">
+                            <span class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            </span>
+                            <span>roots_of_touch</span>
+                        </a>
+                        <a class="contact-item" href="tel:+420733469839">
+                            <span class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+                            </span>
+                            <span>+420 733 469 839</span>
+                        </a>
+                        <div class="contact-item">
+                            <span class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                            </span>
+                            <span class="contact-address-block">
+                                <span class="contact-place-name">Centrum Unity</span>
+                                <span class="contact-street">Šmilovského, Praha&nbsp;2 – Vinohrady</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oblast C: formulář (vpravo na desktopu) -->
+                <div class="cb-form">
+                    <form class="contact-form" action="https://formspree.io/f/TVUJ_KOD" method="POST">
+                        <div class="contact-form-field">
+                            <label for="cf-name">Jméno</label>
+                            <input type="text" id="cf-name" name="name" placeholder="Tvoje jméno" required>
+                        </div>
+                        <div class="contact-form-field">
+                            <label for="cf-email">E-mail</label>
+                            <input type="email" id="cf-email" name="email" placeholder="tvuj@email.cz" required>
+                        </div>
+                        <div class="contact-form-field">
+                            <label for="cf-phone">Telefon</label>
+                            <input type="tel" id="cf-phone" name="phone" placeholder="+420 000 000 000">
+                        </div>
+                        <div class="contact-form-field">
+                            <label for="cf-message">Zpráva</label>
+                            <textarea id="cf-message" name="message" placeholder="Napiš mi…" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="contact-form-submit">Odeslat zprávu</button>
+                    </form>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Rezervace -->
-    <section class="booking-section" id="rezervace">
-        <div class="container">
-            <span class="section-label">Rezervace</span>
-            <h2>REZERVACE</h2>
-            <p class="booking-section-text">Pro rezervaci svého termínu mi&nbsp;napiš na&nbsp;e-mail nebo na&nbsp;Instagram.<br>Do&nbsp;e-mailu nezapomeň přiložit své telefonní číslo a&nbsp;já se&nbsp;ti brzy ozvu s&nbsp;nejbližšími volnými termíny.</p>
-        </div>
-    </section>
-
-    <!-- Storno podmínky -->
+    <!-- Storno + Stále váháš -->
     <section class="storno-section">
         <div class="container">
-            <div class="booking-policy">
-                <h3 class="booking-policy-title">Rezervační poplatek</h3>
-                <p>Rezervační poplatek činí 1&nbsp;000&nbsp;Kč, který se&nbsp;následně započítává do&nbsp;celkové ceny masáže. Zbývající částku doplatíš na&nbsp;místě.</p>
+            <div class="storno-hesitation-grid">
+                <div class="booking-policy">
+                    <h3 class="booking-policy-title">Rezervační poplatek</h3>
+                    <p>Rezervační poplatek činí 1&nbsp;000&nbsp;Kč, který se&nbsp;následně započítává do&nbsp;celkové ceny masáže. Zbývající částku doplatíš na&nbsp;místě.</p>
 
-                <h3 class="booking-policy-title">Storno podmínky</h3>
-                <p>Zrušení rezervace více než&nbsp;36&nbsp;hodin předem — vracím 100&nbsp;% rezervačního poplatku (1&nbsp;000&nbsp;Kč).</p>
-                <p>Zrušení rezervace méně než&nbsp;36&nbsp;hodin předem — účtuji 50&nbsp;% z&nbsp;ceny rezervačního poplatku, tedy 500&nbsp;Kč.</p>
-                <p>Zrušení rezervace méně než&nbsp;24&nbsp;hodin předem — účtuji 100&nbsp;% z&nbsp;ceny rezervačního poplatku, tedy 1&nbsp;000&nbsp;Kč.</p>
-                <p class="booking-policy-note">(Jedná se&nbsp;pouze o&nbsp;částku za&nbsp;pronájem prostoru, kde jsou smluveny tyto storno podmínky. Děkuji za&nbsp;pochopení.)</p>
+                    <h3 class="booking-policy-title">Storno podmínky</h3>
+                    <p>Zrušení rezervace více než&nbsp;36&nbsp;hodin předem — vracím 100&nbsp;% rezervačního poplatku (1&nbsp;000&nbsp;Kč).</p>
+                    <p>Zrušení rezervace méně než&nbsp;36&nbsp;hodin předem — účtuji 50&nbsp;% z&nbsp;ceny rezervačního poplatku, tedy 500&nbsp;Kč.</p>
+                    <p>Zrušení rezervace méně než&nbsp;24&nbsp;hodin předem — účtuji 100&nbsp;% z&nbsp;ceny rezervačního poplatku, tedy 1&nbsp;000&nbsp;Kč.</p>
+                    <p class="booking-policy-note">(Jedná se&nbsp;pouze o&nbsp;částku za&nbsp;pronájem prostoru, kde jsou smluveny tyto storno podmínky. Děkuji za&nbsp;pochopení.)</p>
+                </div>
+                <div class="service-hesitation">
+                    <h3 class="service-hesitation-title">STÁLE VÁHÁŠ, JESTLI:</h3>
+                    <div class="service-hesitation-grid">
+                        <div class="service-hesitation-left">
+                            <span>JE TOHLE PRO TEBE TA SPRÁVNÁ VOLBA?</span>
+                        </div>
+                        <div class="service-hesitation-right">
+                            <span>SE CHCEŠ DO TÉHLE PRÁCE PONOŘIT PRÁVĚ SE MNOU?</span>
+                        </div>
+                    </div>
+                    <p class="service-hesitation-text">Napiš mi na&nbsp;můj Instagram, kde ti ráda odpovím na&nbsp;otázky, které by tě ohledně našeho setkání zajímaly. Také tam najdeš spoustu obsahu a&nbsp;nejrůznějších videí, která ti můžou pomoci víc nacítit moji energii a&nbsp;to, jestli by ti byla moje přítomnost příjemná. Pokud nepoužíváš Instagram nebo jiné sociální sítě, můžeš mě kontaktovat e-mailem.</p>
+                </div>
             </div>
         </div>
     </section>
