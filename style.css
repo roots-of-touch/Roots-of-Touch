@@ -1819,7 +1819,7 @@ p {
 }
 
 .contact-booking-section {
-    padding: var(--space-md) 0 var(--space-xl);
+    padding: var(--space-md) 0 var(--space-md);
 }
 
 .contact-booking-grid {
@@ -1972,7 +1972,7 @@ a.contact-item:hover .contact-icon {
 }
 
 .storno-section {
-    padding: var(--space-xl) 0;
+    padding: var(--space-md) 0 var(--space-xl);
 }
 
 .storno-hesitation-grid {
