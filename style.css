@@ -1784,6 +1784,10 @@ p {
     color: #fff;
 }
 
+.contact-form-success[hidden] {
+    display: none;
+}
+
 .contact-form-success {
     display: flex;
     flex-direction: column;
@@ -2253,6 +2257,11 @@ a.contact-item:hover .contact-icon {
     .contact-booking-section {
         padding-top: 0;
         margin-top: -1rem;
+        padding-bottom: 0;
+    }
+
+    .storno-section {
+        padding-top: var(--space-sm);
     }
 
     .contact-booking-grid {
