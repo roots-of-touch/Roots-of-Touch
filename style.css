@@ -2011,11 +2011,10 @@ a.contact-item:hover .contact-icon {
 
 .booking-policy-highlight {
     margin-top: var(--space-sm);
-    font-family: var(--font-sans);
     font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    color: var(--color-text);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: var(--color-text-soft);
 }
 
 .booking-policy-note {
