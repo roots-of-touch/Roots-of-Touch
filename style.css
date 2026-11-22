@@ -2569,3 +2569,41 @@ a.contact-item:hover .contact-icon {
         padding: 1.25rem;
     }
 }
+
+
+/* --- Prostor, kde se potkáme --- */
+.space-section {
+    padding: var(--space-xl) 0;
+    background-color: var(--color-bg-warm);
+}
+
+.space-title {
+    text-align: center;
+    color: var(--color-text);
+}
+
+.space-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-sm);
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.space-gallery img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: var(--color-bg-deep);
+}
+
+@media (max-width: 768px) {
+    .space-section {
+        padding: var(--space-lg) 0;
+    }
+
+    .space-gallery {
+        grid-template-columns: 1fr;
+    }
+}
