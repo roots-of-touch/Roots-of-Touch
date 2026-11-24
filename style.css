@@ -2617,3 +2617,42 @@ a.contact-item:hover .contact-icon {
     letter-spacing: 0;
     line-height: 1;
 }
+
+/* Kaligrafické nadpisy vybraných bloků */
+.service-tag.service-tag-title,
+.service-for-whom-grid h4,
+h3.massage-comparison-title,
+h3.celostni-heading,
+.expectations-col h3,
+h3.contact-heading {
+    font-family: 'Allura', cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.2;
+}
+
+.service-tag.service-tag-title {
+    font-size-adjust: 0.42;
+}
+
+.service-for-whom-grid h4,
+.expectations-col h3,
+h3.contact-heading {
+    font-size: 2.1rem;
+}
+
+h3.massage-comparison-title,
+h3.celostni-heading {
+    font-size: 2.6rem;
+}
+
+.service-price-label {
+    font-family: 'Allura', cursive;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.1;
+}
